@@ -1,7 +1,7 @@
 export default [
     {
         id: 'covid',
-        title: 'COVID-19',
+        title: 'The Plague',
         image: 'covid.png',
         description: `
         COVID is sweeping across the country, with an exponentially rising death toll, do you take any precautions?
@@ -15,14 +15,18 @@ export default [
         `,
             hp: -5,
             fascism: 5,
+            class: 'poor',
+
         }, {
             id: 'essential',
-            description: 'I would, but Im an essential employee...',
+            description: 'I would, but I\'m an essential employee...',
             result: `
             You die of Corona. Capitilism thanks you for your sacrifice by sending your medical bills to your family.
         `,
             hp: -10,
             fascism: 0,
+            class: 'poor',
+
         }, {
             id: 'yes',
             description: 'I mean yeah, obviously, it\'s a deadly pandemic',
@@ -32,6 +36,8 @@ export default [
         `,
             hp: 0,
             fascism: 0,
+            class: 'poor',
+
         }]
     },
     {
@@ -53,6 +59,8 @@ export default [
         `,
             hp: -5,
             fascism: 1,
+            class: 'poor',
+
         }, {
             id: 'join',
             description: 'Join the protest!',
@@ -64,6 +72,8 @@ export default [
         `,
             hp: -5,
             fascism: 0,
+            class: 'poor',
+
         }, {
             id: 'murder',
             description: 'Go murder random strangers on the street like a patriot!',
@@ -74,6 +84,8 @@ export default [
         `,
             hp: 0,
             fascism: 50,
+            class: 'poor',
+
         }]
     },
     {
@@ -90,24 +102,30 @@ export default [
             result: 'Just as you are about to enjoy your \'za, you get gunned down by a Qanon cultist convinced there is a child trafficing ring operating under the pizza shop. You fool, you thought 2020 couldn\'t take pizza, but 2020 will take everything.',
             hp: -10,
             fascism: 0,
+            class: 'poor',
+
         }, {
             id: 'soup',
             description: 'Some soup to feed your family',
             result: 'As you leave the store with your can of soup, an unmarked van swoops you up. You are never heard from again, but years later a FOIA request finds that the FBI linked you to numerous  soup related acts of terror. ',
             hp: -10,
             fascism: 0,
+            class: 'poor',
+
         }, {
-            id: 'poor',
+            id: 'eat-poor',
             description: 'Eat the poor',
             result: 'They\'re not the most tender, the marbling isn\'t great, and they complain a lot. But I mean if they didn\'t want to be eaten they shouldn\'t have decided to be poor.',
             hp: 0,
             fascism: 10,
+            class: 'poor',
         }, {
-            id: 'rich',
+            id: 'eat-rich',
             description: 'Eat the rich',
-            result: 'Mmmmm good for the heart and the soul. Bad for the rich. Gain 10 health',
+            result: 'Mmmmm good for the heart and the soul. Bad for the rich. Gain 10 health. Also you\'re rich now. Congratulations.',
             hp: 10,
             fascism: 0,
+            class: 'new-rich',
             
         }]
     }

@@ -1,6 +1,6 @@
 import quests from '../data.js';
 import { findById, renderUI } from '../utils.js';
-import { getUser, saveUser, scoreUpdate } from '../utils.js';
+import { getUser, saveUser, scoreUpdate, hasCompletedAllQuests } from '../utils.js';
 
 
 const section = document.querySelector('section');
@@ -24,7 +24,7 @@ p.textContent = quest.description;
 section.appendChild(image);
 section.appendChild(p);
 const form = document.createElement('form');
-const resultSpan = document.createElement('p')
+const resultSpan = document.createElement('p');
 section.appendChild(resultSpan);
 section.appendChild(form);
 
@@ -42,7 +42,7 @@ quest.choices.forEach(choice => {
 
 });
 
-const nextButton = document.createElement('button')
+const nextButton = document.createElement('button');
 nextButton.textContent = 'Next';
 nextButton.classList.add('hidden');
 form.addEventListener('submit', (e) => {
@@ -56,7 +56,7 @@ form.addEventListener('submit', (e) => {
     const user = getUser();
     scoreUpdate(choice, quest.id, user);
     saveUser(user);
-    
+
 
     form.classList.add('hidden');
     nextButton.classList.remove('hidden');
@@ -72,9 +72,15 @@ const button = document.createElement('button');
 
 button.textContent = 'Submit';
 form.appendChild(button);
-section.appendChild(nextButton)
+section.appendChild(nextButton);
 
 nextButton.addEventListener('click', () => {
-    window.location.href = '../calender';
-    renderUI();
+    const user = getUser();
+    if (user.hp === 0 || user.class === 'rich' || hasCompletedAllQuests(quests, user)) {
+        window.location.href = '../results';
+    } else {
+
+        window.location.href = '../calender';
+        renderUI();
+    }
 });
