@@ -4,7 +4,7 @@ export default [
         title: 'COVID-19',
         image: 'covid.png',
         description: `
-        COVID is sweeping across the country, with an exponentialy rising death toll, do you take any precautions?
+        COVID is sweeping across the country, with an exponentially rising death toll, do you take any precautions?
     `,
         choices: [{
             id: 'no',
@@ -52,7 +52,7 @@ export default [
             your neighborhood by teargassing the shit out of it. You're welcome. Also take 5 damage. Coward.
         `,
             hp: -5,
-            fascim: 1,
+            fascism: 1,
         }, {
             id: 'join',
             description: 'Join the protest!',
@@ -63,7 +63,7 @@ export default [
             shit out of you. Take 5 damage. 
         `,
             hp: -5,
-            fascim: 0,
+            fascism: 0,
         }, {
             id: 'murder',
             description: 'Go murder random strangers on the street like a patriot!',
@@ -105,9 +105,10 @@ export default [
         }, {
             id: 'rich',
             description: 'Eat the rich',
-            result: 'Mmmmm good for the heart and the soul. Bad for the rich.',
+            result: 'Mmmmm good for the heart and the soul. Bad for the rich. Gain 10 health',
             hp: 10,
             fascism: 0,
+            
         }]
     }
 ];

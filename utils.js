@@ -26,7 +26,7 @@ export function getUser() {
     return JSON.parse(stringyUser);
 }
 const head = document.querySelector('header')
-export function renderUI() { 
+export function renderUI() {
     const user = getUser();
     const healthSpan = document.createElement('p');
     const nameSpan = document.createElement('p');
@@ -44,8 +44,11 @@ export function renderUI() {
 
 }
 
-export function updateUI(){
-   const user = getUser();
-   
 
+export function scoreUpdate(choice, questId, user) {
+    user.hp += choice.hp;
+    user.fascism += choice.fascism;
+    user.completed[questId] = true;
 }
+
+
