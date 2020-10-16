@@ -1,12 +1,15 @@
 
-
+import { saveUser } from './utils.js';
 const form = document.querySelector('form');
 
 function makePlayer(data) {
     const user = {
         name: data.get('name'),
         class: data.get('class'),
-        health: 10,
+        hp: 10,
+        fascism: 0,
+        completed:{},
+
     };
     return user;
 
@@ -15,14 +18,13 @@ function makePlayer(data) {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const data = new FormData(form)
+    const data = new FormData(form);
     const player = makePlayer(data);
-    if (player.class === 'rich'){
+    saveUser(player);
+    if (player.class === 'rich') {
         window.location.href = './results';
     } else {
         window.location.href = './calender';
     }
 
-
-    console.log(player);
 });
