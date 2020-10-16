@@ -44,7 +44,7 @@ quest.choices.forEach(choice => {
 
 const nextButton = document.createElement('button')
 nextButton.textContent = 'Next';
-nextButton.classList.add('hidden')
+nextButton.classList.add('hidden');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -54,17 +54,15 @@ form.addEventListener('submit', (e) => {
     const choice = findById(quest.choices, choiceId);
 
     const user = getUser();
-    // generate a score and manipulate user state
     // scoreQuest(choice, quest.id, user);
-    // save user
     saveUser(user);
 
     // update UI
 
     form.classList.add('hidden');
     nextButton.classList.remove('hidden');
+    p.classList.add('hidden');
     resultSpan.textContent = choice.result;
-    // reload profile for new stats
     // loadProfile();
 
 });
