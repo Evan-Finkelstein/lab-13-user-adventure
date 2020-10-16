@@ -125,7 +125,7 @@ export default [
             result: 'Mmmmm good for the heart and the soul. Bad for the rich. Gain 10 health. Also you\'re rich now. Congratulations.',
             hp: 10,
             fascism: 0,
-            class: 'rich',
+            class: 'new-rich',
             
         }]
     }

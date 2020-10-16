@@ -1,8 +1,4 @@
 
-
-
-
-
 export function findById(someArray, id) {
     for (let i = 0; i < someArray.length; i++) {
         const item = someArray[i];
@@ -25,7 +21,7 @@ export function getUser() {
 
     return JSON.parse(stringyUser);
 }
-const head = document.querySelector('header')
+const head = document.querySelector('header');
 export function renderUI() {
     const user = getUser();
     const healthSpan = document.createElement('p');
@@ -52,4 +48,15 @@ export function scoreUpdate(choice, questId, user) {
     user.class = choice.class;
 }
 
+
+export function hasCompletedAllQuests(quests, user) {
+    for (let i = 0; i < quests.length; i++) {
+        const quest = quests[i];
+        if (!user.completed[quest.id]) {
+            return false;
+        }
+    }
+
+    return true;
+}
 

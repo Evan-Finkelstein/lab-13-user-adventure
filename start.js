@@ -8,7 +8,7 @@ function makePlayer(data) {
         class: data.get('class'),
         hp: 10,
         fascism: 0,
-        completed:{},
+        completed: {},
 
     };
     return user;
@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
     // if (player.class === 'rich') {
     //     window.location.href = './results';
     // } else {
-        window.location.href = './calender';
+    window.location.href = './calender';
     // }
 
 });

@@ -4,9 +4,12 @@ body{
    background-size: contain;
    background-repeat: no-repeat;
     width: 100%;
+    
 }
 ul{
     display: inline;
+    flex-wrap: nowrap;
+
 }
 li{display: inline;
     margin: 65px;
@@ -14,10 +17,13 @@ li{display: inline;
     border: black solid 1px;
     border-radius: 5px;
     padding: 5px;color: black;
+    flex-wrap: nowrap;
+    width: 30%;
 }
 a{
     color: black;
     font-family: monospace;
     font-size: 1.3em;
+    flex-wrap: nowrap;
 
 }
