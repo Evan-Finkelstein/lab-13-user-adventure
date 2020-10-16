@@ -49,6 +49,7 @@ export function scoreUpdate(choice, questId, user) {
     user.hp += choice.hp;
     user.fascism += choice.fascism;
     user.completed[questId] = true;
+    user.class = choice.class;
 }
 
 

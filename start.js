@@ -21,10 +21,10 @@ form.addEventListener('submit', (e) => {
     const data = new FormData(form);
     const player = makePlayer(data);
     saveUser(player);
-    if (player.class === 'rich') {
-        window.location.href = './results';
-    } else {
+    // if (player.class === 'rich') {
+    //     window.location.href = './results';
+    // } else {
         window.location.href = './calender';
-    }
+    // }
 
 });
