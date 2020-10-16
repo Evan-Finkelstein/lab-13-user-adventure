@@ -25,5 +25,27 @@ export function getUser() {
 
     return JSON.parse(stringyUser);
 }
+const head = document.querySelector('header')
+export function renderUI() { 
+    const user = getUser();
+    const healthSpan = document.createElement('p');
+    const nameSpan = document.createElement('p');
+    const fascismSpan = document.createElement('p');
+    const classSpan = document.createElement('p');
+    healthSpan.textContent = `hp: ${user.hp}`;
+    nameSpan.textContent = `Name: ${user.name}`;
+    fascismSpan.textContent = `Fascism: ${user.fascism}`;
+    classSpan.textContent = `Class: ${user.class}`;
+    head.appendChild(nameSpan);
+    head.appendChild(healthSpan);
+    head.appendChild(classSpan);
+    head.appendChild(fascismSpan);
 
 
+}
+
+export function updateUI(){
+   const user = getUser();
+   
+
+}
