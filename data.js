@@ -122,8 +122,8 @@ export default [
         }, {
             id: 'eat-rich',
             description: 'Eat the rich',
-            result: 'Mmmmm good for the heart and the soul. Bad for the rich. Gain 10 health. Also you\'re rich now. Congratulations.',
-            hp: 10,
+            result: 'Mmmmm good for the heart and the soul. Bad for the rich.  You\'re rich now. Congratulations.',
+            hp: 0,
             fascism: 0,
             class: 'new-rich',
             
