@@ -1,6 +1,6 @@
 import quests from '../data.js';
 import { findById, renderUI } from '../utils.js';
-import { getUser, saveUser } from '../utils.js';
+import { getUser, saveUser, scoreUpdate } from '../utils.js';
 
 
 const section = document.querySelector('section');
@@ -54,10 +54,9 @@ form.addEventListener('submit', (e) => {
     const choice = findById(quest.choices, choiceId);
 
     const user = getUser();
-    // scoreQuest(choice, quest.id, user);
+    scoreUpdate(choice, quest.id, user);
     saveUser(user);
-
-    // update UI
+    
 
     form.classList.add('hidden');
     nextButton.classList.remove('hidden');
@@ -77,4 +76,5 @@ section.appendChild(nextButton)
 
 nextButton.addEventListener('click', () => {
     window.location.href = '../calender';
+    renderUI();
 });
