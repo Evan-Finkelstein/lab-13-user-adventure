@@ -2,10 +2,6 @@ export default [
     {
         id: 'covid',
         title: 'COVID-19',
-        map: {
-            top: '89%',
-            left: '44%'
-        },
         image: 'covid.png',
         description: `
         COVID is sweeping across the country, with an exponentialy rising death toll, do you take any precautions?
@@ -14,15 +10,16 @@ export default [
             id: 'no',
             description: 'Fuck No!',
             result: `
-            Congratulations, you excercise your first amendment rights and kill your elderly parents, like a patriot!
+            Congratulations, you excercise your first amendment rights and kill your elderly parents, like a patriot! 
+            Also take 5 damage you hero.
         `,
             hp: -5,
             fascism: 5,
         }, {
             id: 'essential',
-            description: 'I mean I would, but Im an essential employee...',
+            description: 'I would, but Im an essential employee...',
             result: `
-            You die of COVID. Capitilism thanks you for your sacrifice by sending your medical bills to your family.
+            You die of Corona. Capitilism thanks you for your sacrifice by sending your medical bills to your family.
         `,
             hp: -10,
             fascism: 0,
@@ -30,7 +27,8 @@ export default [
             id: 'yes',
             description: 'I mean yeah, obviously, it\'s a deadly pandemic',
             result: `
-            Coward. You unpatrioticaly neither die from, nor kill anyone else with, COVID.
+            Coward. You unpatrioticaly neither die from, nor kill anyone else with, Corona Virus. 
+            You probably wear a seat-belt too, loser.
         `,
             hp: 0,
             fascism: 0,
@@ -39,10 +37,7 @@ export default [
     {
         id: 'protests',
         title: 'Protest police brutality',
-        map: {
-            top: '17%',
-            left: '37%'
-        },
+        
         image: 'protest.png',
      
         description: `
@@ -54,7 +49,7 @@ export default [
             result: `
             You thought you would be safe at home. But you know where terrorists live? In houses. 
             Your local police force has taken it upon itself to protetct and serve
-            your neighborhood by teargassing the shit out of it. You're welcome.
+            your neighborhood by teargassing the shit out of it. You're welcome. Also take 5 damage. Coward.
         `,
             hp: -5,
             fascim: 1,
@@ -65,7 +60,7 @@ export default [
             Look at you, with your direct action. I mean sure, technically 
             you're a terrorist now, but you made that decision the second 
             you decided state sanctioned murder was bad. Oh also the police beat the
-            shit out of you.
+            shit out of you. Take 5 damage. 
         `,
             hp: -5,
             fascim: 0,
@@ -84,19 +79,15 @@ export default [
     {
         id: 'food',
         title: 'Have a bite to eat',
-        map: {
-            top: '31%',
-            left: '5%'
-        },
         image: 'food.png',
         description: `
 
-        Youre hungry, what do you eat?
+        You're hungry, what do you eat?
     `,
         choices: [{
             id: 'pizza',
             description: 'Pizzas always safe',
-            result: 'Just as you are about to enjoy your za, you get gunned down by a Qanon cultist convinced there is a child trafficing ring operating under the pizza shop. You fool, you thought 2020 couldn\'t take pizza, but 2020 will take everything.',
+            result: 'Just as you are about to enjoy your \'za, you get gunned down by a Qanon cultist convinced there is a child trafficing ring operating under the pizza shop. You fool, you thought 2020 couldn\'t take pizza, but 2020 will take everything.',
             hp: -10,
             fascism: 0,
         }, {
@@ -108,7 +99,7 @@ export default [
         }, {
             id: 'poor',
             description: 'Eat the poor',
-            result: 'They\'re not the most tender, the marbling isn\'t great, and they complain a lot. But I mean if they didn\'t want to be eaten they shouldnt have decided to be poor.',
+            result: 'They\'re not the most tender, the marbling isn\'t great, and they complain a lot. But I mean if they didn\'t want to be eaten they shouldn\'t have decided to be poor.',
             hp: 0,
             fascism: 10,
         }, {

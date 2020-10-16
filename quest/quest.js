@@ -1,5 +1,5 @@
 import quests from '../data.js';
-import { findById } from '../utils.js';
+import { findById, renderUI } from '../utils.js';
 import { getUser, saveUser } from '../utils.js';
 
 
@@ -12,7 +12,7 @@ const id = searchParams.get('id');
 const quest = findById(quests, id);
 
 const h2 = document.createElement('h2');
-
+renderUI();
 h2.textContent = quest.title;
 
 section.appendChild(h2);
